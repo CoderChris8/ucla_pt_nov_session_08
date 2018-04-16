@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
+import { Route } from 'react-router-dom';
+import { Header, Home } from './components';
 
 class App extends Component {
   constructor() {
@@ -41,6 +42,12 @@ class App extends Component {
           name="title" 
           value={this.state.title}
           onChange={this.handleChange.bind(this)} />
+
+
+        <Route path="/" exact component={Home} />
+        {/* <Route path="/home" component={Home} />
+        <Route path="/about" component={Home} />
+        <Route path="/contact"  component={Home} /> */}
       </div>
     );
   }
